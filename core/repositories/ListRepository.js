@@ -24,6 +24,7 @@ module.exports.add = function(listData, callback){
 module.exports.getAll = function(callback){
     List.find({})
         .populate('items')
+        .populate({path: 'items', populate:{path: 'prices', model:'Price'} })
         .exec(function(err, lists){
         return callback(err, lists);
     });
