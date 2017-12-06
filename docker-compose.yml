@@ -4,4 +4,4 @@ services:
     container_name: "simple-list-db"
     image: "mongo:3.0"
     ports:
-      - 27017
+      - "27017:27017"

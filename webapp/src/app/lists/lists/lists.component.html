@@ -1,7 +1,16 @@
-<div class="container">
-  <div class="jumbotron">
-    <h1>Lists Works</h1>
-    <h2>Angular With Bootstrap</h2>
-  </div>
-
-</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col-2">#</th>
+      <th scope="col-8">List Name</th>
+      <th scope="col-2">Ops</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let list of lists; let i=index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{list.name}}</td>
+      <td>Delete</td>
+    </tr>
+  </tbody>
+</table>

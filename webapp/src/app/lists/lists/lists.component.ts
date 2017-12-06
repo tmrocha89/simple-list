@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { List } from '../../models/list';
 
 @Component({
   selector: 'app-lists',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListsComponent implements OnInit {
 
-  constructor() { }
+  lists:List[];
+
+  constructor() {
+    this.lists = [new List("Lista 1"), new List("Lista 2")];
+  }
 
   ngOnInit() {
   }
