@@ -10,7 +10,10 @@
     <tr *ngFor="let list of lists; let i=index">
       <th scope="row">{{i+1}}</th>
       <td>{{list.name}}</td>
-      <td><button type="button" class="btn btn-danger">Delete</button></td>
+      <td>
+        <button type="button" class="btn btn-info">View</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+      </td>
     </tr>
   </tbody>
 </table>
